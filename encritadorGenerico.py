@@ -35,4 +35,4 @@ def paginaprincipal():
     return html("index.html", clave=codigo_final)
 
 if __name__ == '__main__':
-    encritador.run(debug=True)
+    encritador.run(host="0.0.0.0", port=5000, debug=True)
