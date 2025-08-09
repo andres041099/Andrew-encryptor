@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Encriptador de Contraseñas</title>
+  <link rel="stylesheet" href="/static/estiloPagina.css">
+</head>
+<body>
+  <main class="contenedor">
+    <h1>🔐 Encriptador de Contraseñas</h1>
+
+    <form id="formEncriptador" action="/" method="post">
+      <label for="inputPassword" class="sr-only">Contraseña</label>
+      <input  
+        type="text"
+        id="inputPassword"
+        name="password"
+        placeholder="Escribe tu contraseña aquí..."
+        autocomplete="off"
+        required
+      />
+
+      <button id="btnEncriptar" name="btnEncriptar" type="submit">Encriptar Contraseña</button>
+    </form>
+
+    <p id="mensajeResultado" aria-live="polite">
+      {% if clave %}
+        Tu contraseña encriptada es: <strong>{{ clave }}</strong>
+      {% else %}
+        Clave encriptada aparecerá aquí.
+      {% endif %}
+    </p>
+  </main>
+  <footer>
+    <p>Desarrollador: Andres Rodriguez Liberato</p>
+    <p>© 2025 Andrew's Software. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
